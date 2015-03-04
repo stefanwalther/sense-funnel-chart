@@ -1,0 +1,9 @@
+{
+	"name" : "Funnel chart",
+	"description" : "Customizable funnel chart.",
+	"icon" : "extension",
+	"type" : "visualization",
+	"version": "@@version",
+	"preview" : "funnelchart.png",
+	"author": "Stefan Walther"
+}
