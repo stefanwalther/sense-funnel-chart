@@ -26,7 +26,7 @@ There are some other configuration options available:
 * Forcing a curved layout
 * Defining the the bottom pinch
 
-![](https://github.com/stefanwalther/qsFunnel/raw/gh-pages/images/qsFunnel_Screenshot.png)
+![](https://github.com/stefanwalther/qsFunnel/raw/gh-pages/images/qsFunnel_Properties.png)
 
 ## Contributing
 Contributing to this project is welcome. The process to do so is outlined below:
