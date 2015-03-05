@@ -39,6 +39,8 @@ I cannot guarantee that I will merge all PRs but I will evaluate them all.
 
 ## Todos
 
+There are some features I definitely like to add. More [suggestions are welcome](https://github.com/stefanwalther/qsFunnel/issues)!
+
 - [ ] Reflect number formatting of the property panel in the chart
 - [ ] Modify color scheme
 - [ ] Make selections possible
