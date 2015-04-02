@@ -60,7 +60,9 @@ define( [
 					var rowVals = [];
 					rowVals.push( row[0].qText );
 					rowVals.push( row[1].qNum );
-					rowVals.push( colorbrewer.Paired[l][i] );
+					if ( l >= 3 ) {
+						rowVals.push( colorbrewer.Paired[l][i] );
+					}
 					data.push( rowVals );
 					i++;
 				} );

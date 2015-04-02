@@ -1,6 +1,6 @@
 {
   "name": "qsfunnel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Customizable funnel chart visualization extension for Qlik Sense.",
   "main": "",
   "scripts": {
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/stefanwalther/qsFunnel/issues"
   },
-  "homepage": "https://github.com/stefanwalther/qsFunnel"
+  "homepage": "https://github.com/stefanwalther/qsFunnel",
+  "devDependencies": {
+    "d3-funnel": "^0.6.6"
+  }
 }

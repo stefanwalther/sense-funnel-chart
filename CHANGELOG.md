@@ -1,5 +1,12 @@
 # Change Log
 
+## Version 1.0.1
+Date: 2015-04-02
+
+*Fixes:**
+- Fixed an error when less than 3 dimensions are available
+
+
 ## Version 1.0.0
 Date: 2015-03-04
 
