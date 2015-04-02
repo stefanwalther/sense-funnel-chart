@@ -1,4 +1,5 @@
 define( [
+		'qlik',
 		'jquery',
 		'underscore',
 		'./properties',
@@ -11,7 +12,7 @@ define( [
 		'./lib/external/d3/d3.min',
 		'./lib/external/d3-funnel/d3-funnel'
 	],
-	function ( $, _, props, initProps, extensionUtils, cssContent, colorbrewer ) {
+	function ( qlik, $, _, props, initProps, extensionUtils, cssContent, colorbrewer ) {
 		'use strict';
 		extensionUtils.addStyleToHeader( cssContent );
 
@@ -27,8 +28,6 @@ define( [
 		function render ( $elem, layout ) {
 			ensureTarget( $elem, layout );
 
-			//console.info( 'layout', layout );
-
 			var options = {
 				width: $elem.width(),
 				height: $elem.height(),
@@ -38,15 +37,34 @@ define( [
 				//bottomWidth: 1 / 2,
 				label: {
 					fontsize: '10px'
-				}
+				},
+				onItemClick: funnel_onItemClick
 			};
 
-			var chart = new D3Funnel( '#chart_' + layout.qInfo.qId );
-			var data = getData( layout );
-			chart.draw( data, options );
+			var funnelChart = new D3Funnel( '#chart_' + layout.qInfo.qId );
+			var data = transformData( layout );
+			funnelChart.draw( data, options );
+
+			function funnel_onItemClick ( d, i ) {
+				//console.info( 'ONCLICK' )
+				//console.log( '--prototyped funnel', d, i );
+				//console.log( '--layout', layout );
+
+				var fld = layout.qHyperCube.qDimensionInfo[0].qGroupFieldDefs[0];
+				var app = qlik.currApp();
+				app.field( fld ).selectValues( [d.label], true, false );
+			}
+
 		}
 
-		function getData ( layout ) {
+		/**
+		 * Transforms the data from the hypercube to the format d3-funnel is expecting.
+		 * @param layout
+		 * @returns {*}
+		 */
+		function transformData ( layout ) {
+
+			console.log( 'hc', layout.qHyperCube );
 
 			var data = null;
 			if ( layout.qHyperCube && layout.qHyperCube.qDataPages[0].qMatrix ) {
@@ -60,7 +78,7 @@ define( [
 					var rowVals = [];
 					rowVals.push( row[0].qText );
 					rowVals.push( row[1].qNum );
-					if ( l >= 3 ) {
+					if ( l >= 3 ) { //colorbrewer doesn't have definition for 1 or 2 values, so let d3-funnel do the work
 						rowVals.push( colorbrewer.Paired[l][i] );
 					}
 					data.push( rowVals );

@@ -170,6 +170,11 @@
 				.on( "mouseout", this.__onMouseOut );
 		}
 
+		// ItemClick event
+		if ( this.onItemClick ) {
+			path.on( "click", this.onItemClick );
+		}
+
 		this.__addSectionLabel( group, index );
 	};
 
@@ -398,6 +403,10 @@
 		this.dy = this.isCurved ?
 		(this.height - this.curveHeight) / data.length :
 		this.height / data.length;
+
+		// Support for events
+		this.onItemClick = settings.onItemClick;
+
 	};
 
 	/**
@@ -621,6 +630,7 @@
 	 * @param {Object} data
 	 */
 	D3Funnel.prototype.__onMouseOver = function ( data ) {
+		console.log( 'mouseover', data );
 		d3.select( this ).attr( "fill", shadeColor( data.baseColor, -0.2 ) );
 	};
 
