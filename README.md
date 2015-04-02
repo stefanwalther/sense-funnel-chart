@@ -43,7 +43,7 @@ There are some features I definitely like to add. More [suggestions are welcome]
 
 - [ ] Reflect number formatting of the property panel in the chart
 - [ ] Modify color scheme
-- [ ] Make selections possible
+- [X] Make selections possible
 
 ## Author
 
