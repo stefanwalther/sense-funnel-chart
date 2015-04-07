@@ -7,7 +7,15 @@ module.exports = function ( grunt ) {
 		options: {
 			processContentExclude: ['**/*.{png,gif,jpg,ico,psd}']
 		},
-		copy_to_dist: {
+		copy_to_dist_dev: {
+			expand: true,                   // allow dynamic building
+			cwd: '../src/',                 // change base dir
+			//src: ['**', '!docs/**'],      // source files mask
+			src: ['**'],
+			dest: '../dist_dev/',           // destination folder
+			flatten: false                  // remove all unnecessary nesting
+		},
+		copy_to_dist_release: {
 			expand: true,                   // allow dynamic building
 			cwd: '../src/',                 // change base dir
 			//src: ['**', '!docs/**'],      // source files mask
@@ -15,11 +23,27 @@ module.exports = function ( grunt ) {
 			dest: '../dist/',               // destination folder
 			flatten: false                  // remove all unnecessary nesting
 		},
-		copy_to_desktop: {
+		copy_to_desktop_dev: {
+			expand: true,
+			cwd: '../dist_dev/',
+			src: '**',
+			dest: '<%= projectconfig.general.LocalExtensionPath%>/<%= projectconfig.general.ExtensionNamespace%><%= projectconfig.general.ExtensionNameSafe%>/'
+		},
+		copy_to_desktop_release: {
 			expand: true,
 			cwd: '../dist/',
 			src: '**',
 			dest: '<%= projectconfig.general.LocalExtensionPath%>/<%= projectconfig.general.ExtensionNamespace%><%= projectconfig.general.ExtensionNameSafe%>/'
+		},
+
+		copy_components_dev: {
+			src: ['./../components/d3-funnel/src/d3-funnel/d3-funnel.js'],
+			dest: '../dist_dev/lib/external/d3-funnel/d3-funnel.js'
+
+		},
+		copy_components_release: {
+			src: ['./../components/d3-funnel/src/d3-funnel/d3-funnel.js'],
+			dest: '../dist/lib/external/d3-funnel/d3-funnel.js'
 		}
 	};
 };

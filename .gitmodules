@@ -1,0 +1,3 @@
+[submodule "components/d3-funnel"]
+	path = components/d3-funnel
+	url = git://github.com/stefanwalther/d3-funnel.git

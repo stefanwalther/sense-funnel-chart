@@ -19,6 +19,11 @@ module.exports = function ( grunt ) {
 
 	grunt.initConfig( cfg );
 
+	grunt.config( 'projectConfig', grunt.file.readYAML( 'grunt-config.yml' ) );
+
+	/**
+	 * Add grunt tasks to a given task list.
+	 */
 	function addTask ( taskList, task, condition ) {
 
 		if ( arguments.length < 3 ) {
@@ -36,11 +41,12 @@ module.exports = function ( grunt ) {
 	var devTasks = [];
 
 	// Clean 'dist' and copy all relevant files to 'dist'
-	addTask( devTasks, 'clean:empty_dist' );
-	addTask( devTasks, 'copy:copy_to_dist' );
+	addTask( devTasks, 'clean:empty_dist_dev' );
+	addTask( devTasks, 'copy:copy_to_dist_dev' );
+	addTask( devTasks, 'copy:copy_components_dev' );
 
 	// Replacements
-	addTask( devTasks, 'replace:general' );
+	addTask( devTasks, 'replace:general_dev' );
 	addTask( devTasks, 'replace:dev' );
 
 	// JSHint
@@ -48,15 +54,15 @@ module.exports = function ( grunt ) {
 
 	// Less Support
 	addTask( devTasks, 'less:dev', cfg.projectconfig.setup.lessSupport );
-	//addTask( devTasks, 'less:allInPlace', cfg.projectconfig.setup.lessSupport );
+	//addTask( devTasks, 'less:allInPlace_dev', cfg.projectconfig.setup.lessSupport );
 
 	// Cleanup
-	addTask( devTasks, 'clean:devFiles' );
+	addTask( devTasks, 'clean:dev' );
 	addTask( devTasks, 'cleanempty:all' );
 
 	// Deploy to Qlik Sense Desktop
 	addTask( devTasks, 'clean:empty_desktop', process.platform === 'win32' );
-	addTask( devTasks, 'copy:copy_to_desktop', process.platform === 'win32' );
+	addTask( devTasks, 'copy:copy_to_desktop_dev', process.platform === 'win32' );
 
 	// Zip to xxx_dev.zip
 	addTask( devTasks, 'compress:dev' );
@@ -71,16 +77,17 @@ module.exports = function ( grunt ) {
 
 	// Clean 'dist' and copy all relevant files to 'dist'
 	addTask( releaseTasks, 'clean:empty_dist' );
-	addTask( releaseTasks, 'copy:copy_to_dist' );
+	addTask( releaseTasks, 'copy:copy_to_dist_release' );
+	addTask( releaseTasks, 'copy:copy_components_release' );
 
 	// Replacements
-	addTask( releaseTasks, 'replace:general' );
+	addTask( releaseTasks, 'replace:general_release' );
 	addTask( releaseTasks, 'replace:release' );
 
 	addTask( releaseTasks, 'less:release', cfg.projectconfig.setup.lessSupport );
 
 	// Cleanup
-	addTask( releaseTasks, 'clean:devFiles' );
+	addTask( releaseTasks, 'clean:release' );
 	addTask( releaseTasks, 'cleanempty:all' );
 
 	// Optimization & Uglification
@@ -91,13 +98,11 @@ module.exports = function ( grunt ) {
 
 	// Deploy to Qlik Sense Desktop
 	addTask( releaseTasks, 'clean:empty_desktop', process.platform === 'win32' );
-	addTask( releaseTasks, 'copy:copy_to_desktop', process.platform === 'win32' );
+	addTask( releaseTasks, 'copy:copy_to_desktop_release', process.platform === 'win32' );
 
 	// Zip
 	addTask( releaseTasks, 'compress:release' );
 	addTask( releaseTasks, 'compress:release_latest' );
-	addTask( releaseTasks, 'compress:dev' );
-	addTask( releaseTasks, 'compress:dev' );
 
 	grunt.registerTask( 'release', releaseTasks );
 

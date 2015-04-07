@@ -34,6 +34,7 @@ define( [
 				isInverted: layout.props.chartInverted,
 				isCurved: layout.props.chartCurved,
 				bottomPinch: layout.props.chartBottomPinch,
+				hoverEffects: true,
 				//bottomWidth: 1 / 2,
 				label: {
 					fontsize: '10px'
@@ -64,7 +65,7 @@ define( [
 		 */
 		function transformData ( layout ) {
 
-			console.log( 'hc', layout.qHyperCube );
+			//console.log( 'hc', layout.qHyperCube );
 
 			var data = null;
 			if ( layout.qHyperCube && layout.qHyperCube.qDataPages[0].qMatrix ) {

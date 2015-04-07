@@ -13,7 +13,7 @@ module.exports = function ( grunt ) {
 			beautify: ('<%= projectconfig.release.uglify.beautify%>' === 'true'),
 			preserveComments: ('<%= projectconfig.release.uglify.preserveComments%>' === 'true'),
 			compress: {
-				drop_console: ('<%= projectconfig.release.uglify.drop_console%>' === 'true')
+				drop_console: true
 			}
 		},
 		release: {

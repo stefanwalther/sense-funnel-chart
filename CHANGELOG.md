@@ -1,5 +1,17 @@
 # Change Log
 
+## Version 1.2.0
+Date: --
+
+**Enhancements:**
+- Enable hover effect when hovering over an item.
+
+## Version 1.1.1
+Date: 2015-04-07
+
+**Fixes:**
+- Fixed an issue when working with Qlik Sense server
+
 ## Version 1.1.0
 Date: 2015-04-02
 
