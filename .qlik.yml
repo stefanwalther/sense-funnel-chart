@@ -1,0 +1,12 @@
+name: Funnel chart,
+uniqueName: swr-funnelchart
+description: Customizable funnel chart.
+type: visualization
+version: 1.0.0
+productVersion: 1.1
+author: Stefan Walther
+screenshots:
+  - label: Screenshot of qsFunnel
+    src: docs/images/qsFunnel_Screenshot.png
+  - label: Properties
+    src: docs/images/qsFunnel_Properties.png
