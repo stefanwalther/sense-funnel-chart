@@ -1,4 +1,4 @@
-name: Funnel chart,
+name: Funnel chart for Qlik Sense
 uniqueName: swr-funnelchart
 description: Customizable funnel chart.
 type: visualization
@@ -10,3 +10,6 @@ screenshots:
     src: docs/images/qsFunnel_Screenshot.png
   - label: Properties
     src: docs/images/qsFunnel_Properties.png
+license:
+  - type: MIT
+  - details: LICENSE.md
