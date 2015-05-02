@@ -41,14 +41,15 @@ I cannot guarantee that I will merge all PRs but I will evaluate them all.
 
 There are some features I definitely like to add. More [suggestions are welcome](https://github.com/stefanwalther/qsFunnel/issues)!
 
-- [ ] Reflect number formatting of the property panel in the chart
+- [X] Reflect number formatting of the property panel in the chart
 - [ ] Modify color scheme
 - [X] Make selections possible
+
 
 ## Author
 
 **Stefan Walther**
-* [qlikblog.at](http://www.qlikblog.at)
+* [qliksite.io](http://qliksite.io)
 * [twitter/waltherstefan](http://twitter.com/waltherstefan)
 * [github.com/stefanwalther](http://github.com/stefanwalther)
 

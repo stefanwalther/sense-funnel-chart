@@ -76,9 +76,13 @@ define( [
 				var l = layout.qHyperCube.qDataPages[0].qMatrix.length;
 				_.each( layout.qHyperCube.qDataPages[0].qMatrix, function ( row ) {
 
+					//console.log( 'data >>', row[1] );
 					var rowVals = [];
 					rowVals.push( row[0].qText );
-					rowVals.push( row[1].qNum );
+					rowVals.push( [
+						row[1].qNum,
+						row[1].qText
+					] );
 					if ( l >= 3 ) { //colorbrewer doesn't have definition for 1 or 2 values, so let d3-funnel do the work
 						rowVals.push( colorbrewer.Paired[l][i] );
 					}

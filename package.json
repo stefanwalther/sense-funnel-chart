@@ -1,6 +1,6 @@
 {
   "name": "qsfunnel",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Customizable funnel chart visualization extension for Qlik Sense.",
   "main": "",
   "scripts": {
