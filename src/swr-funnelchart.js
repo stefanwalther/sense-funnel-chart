@@ -1,7 +1,6 @@
 define( [
 		'qlik',
 		'jquery',
-		'underscore',
 		'./properties',
 		'./initialproperties',
 		'./lib/js/extensionUtils',
@@ -12,7 +11,7 @@ define( [
 		'./lib/external/d3/d3.min',
 		'./lib/external/d3-funnel/d3-funnel'
 	],
-	function ( qlik, $, _, props, initProps, extensionUtils, cssContent, colorbrewer ) {
+	function ( qlik, $, props, initProps, extensionUtils, cssContent, colorbrewer ) {
 		'use strict';
 		extensionUtils.addStyleToHeader( cssContent );
 
@@ -74,7 +73,7 @@ define( [
 
 				var i = 0;
 				var l = layout.qHyperCube.qDataPages[0].qMatrix.length;
-				_.each( layout.qHyperCube.qDataPages[0].qMatrix, function ( row ) {
+				layout.qHyperCube.qDataPages[0].qMatrix.forEach( function ( row ) {
 
 					//console.log( 'data >>', row[1] );
 					var rowVals = [];
