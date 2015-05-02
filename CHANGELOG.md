@@ -1,12 +1,13 @@
 # Change Log
 
 
-## Version 1.2.0
+## Version 1.2.1
 Date: 2015-05-01
 
 **Enhancements:**
 - Enable hover effect when hovering over an item.
 - Allow formatting of values (the formatted value of Qlik Sense will be displayed in the funnel)
+- Added preview image
 
 ## Version 1.1.1
 Date: 2015-04-07
