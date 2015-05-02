@@ -1,5 +1,10 @@
 # Change Log
 
+## Version 1.2.2
+Date: 2015-05-02
+
+**Enhancements:**
+- Remove dependency on underscore
 
 ## Version 1.2.0
 Date: 2015-05-01
