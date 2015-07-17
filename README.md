@@ -6,12 +6,6 @@
 
 ***
 
-## Table of Contents
-
-<!-- toc -->
-
-***
-
 ## Screenshot
 
 ![](https://github.com/stefanwalther/sense-funnel-chart/raw/gh-pages/images/qsFunnel_Screenshot.png)
