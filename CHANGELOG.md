@@ -1,5 +1,12 @@
 # Change Log
 
+## Version 1.3.0
+Date: 2015-07-17
+
+**Enhancements:**
+- Changed documentation system
+- Updated to newest version of d3-funnel
+
 ## Version 1.2.2
 Date: 2015-05-02
 

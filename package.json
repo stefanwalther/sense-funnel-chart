@@ -1,14 +1,14 @@
 {
   "name": "qsfunnel",
-  "version": "1.2.2",
-  "description": "Customizable funnel chart visualization extension for Qlik Sense.",
+  "version": "1.3.0",
+  "description": "Funnel Chart for Qlik Sense.",
   "main": "",
   "scripts": {
     "test": ""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/stefanwalther/qsFunnel.git"
+    "url": "https://github.com/stefanwalther/sense-funnel-chart.git"
   },
   "keywords": [
     "qliksense-visualization-extension"
@@ -16,8 +16,10 @@
   "author": "Stefan Walther",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stefanwalther/qsFunnel/issues"
+    "url": "https://github.com/stefanwalther/sense-funnel-chart/issues"
   },
-  "homepage": "https://github.com/stefanwalther/qsFunnel",
-  "devDependencies": {}
+  "homepage": "https://github.com/stefanwalther/sense-funnel-chart",
+  "devDependencies": {
+    "verb": "git://github.com/verbose/verb"
+  }
 }
