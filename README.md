@@ -15,6 +15,7 @@
 * [Configuration](#configuration)
 * [Contributing](#contributing)
 * [Todos](#todos)
+* [Related projects](#related-projects)
 * [Author](#author)
 * [License](#license)
 
@@ -69,6 +70,16 @@ There are some features I definitely like to add. More [suggestions are welcome]
 * [X] Reflect number formatting of the property panel in the chart
 * [ ] Modify color scheme
 * [X] Make selections possible
+
+## Related projects
+
+Some related projects (Qlik Sense Visualization Extensions) I have recently created:
+
+* [qliksense-extension-tutorial](https://github.com/stefanwalther/qliksense-extension-tutorial): Comprehensive tutorial to start developing Qlik Sense Extensions.
+* [sense-media-box](https://github.com/stefanwalther/sense-media-box): Include web pages, videos, images and much more into your Qlik Sense app.
+* [sense-themable-kpi-tile](https://github.com/stefanwalther/sense-themable-kpi-tile): KPI Tile for Qlik Sense with the ability to use themes or to customize background… [more](https://github.com/stefanwalther/sense-themable-kpi-tile)
+* [sense-on-off-switch](https://github.com/stefanwalther/sense-on-off-switch): Set a variable in Qlik Sense to true/false using an on-off switch.
+* [sense-extension-recipes](https://github.com/stefanwalther/sense-extension-recipes): Recipes on working with Qlik Sense Visualization Extensions.
 
 ## Author
 
