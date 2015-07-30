@@ -35,7 +35,8 @@ There are some other configuration options available:
 
 ## Contributing
 
-Contributing to this project is welcome. The process to do so is outlined below:
+Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/stefanwalther/sense-funnel-chart/issues).
+The process for contributing is outlined below:
 
 1. Create a fork of the project
 2. Work on whatever bug or feature you wish
