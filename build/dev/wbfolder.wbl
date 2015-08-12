@@ -2,7 +2,7 @@ funnelchart.png;
 initialproperties.js;
 lib/css/style.css;
 lib/external/colorbrewer/colorbrewer.js;
-lib/external/d3-funnel/d3-funnel.js.bak;
+lib/external/d3-funnel/d3-funnel.js;
 lib/external/d3/d3.min.js;
 lib/js/extensionUtils.js;
 properties.js;
