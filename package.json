@@ -1,6 +1,6 @@
 {
   "name": "sense-funnel-chart",
-  "version": "1.3.8",
+  "version": "1.3.9",
   "description": "Funnel Chart for Qlik Sense.",
   "main": "",
   "scripts": {
