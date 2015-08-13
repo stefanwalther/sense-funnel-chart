@@ -1,5 +1,6 @@
 funnelchart.png;
 initialproperties.js;
+lib/css/main.css;
 lib/css/style.css;
 lib/external/colorbrewer/colorbrewer.js;
 lib/external/d3-funnel/d3-funnel.js;

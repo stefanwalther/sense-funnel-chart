@@ -4,7 +4,7 @@ define( [
 		'./properties',
 		'./initialproperties',
 		'./lib/js/extensionUtils',
-		'text!./lib/css/style.css',
+		'text!./lib/css/main.css',
 		'./lib/external/colorbrewer/colorbrewer',
 
 		// no return value
