@@ -88,6 +88,14 @@ define( [], function () {
 		],
 		defaultValue: false
 	}
+	
+	var chartTextColor = {
+		ref: "props.chartTextColor",
+		type: "string",  
+        component: "color-picker", 
+		label: "Text Color",		
+        defaultValue: 10  
+	}
 
 	// ****************************************************************************************
 	// Property Panel Definition
@@ -104,7 +112,8 @@ define( [], function () {
 					chartInverted: chartInverted,
 					chartCurved: chartCurved,
 					chartBottomPinch: chartBottomPinch,
-					chartDynamicArea : chartDynamicArea
+					chartDynamicArea: chartDynamicArea,
+					chartTextColor: chartTextColor
 				}
 			}
 		}
