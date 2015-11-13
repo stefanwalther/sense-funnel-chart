@@ -70,6 +70,24 @@ define( [], function () {
 		step: 1,
 		defaultValue: 0
 	};
+	
+	var chartDynamicArea = {
+		ref: "props.chartDynamicArea",
+		type: "boolean",
+		component: "switch",
+		label: "Dynamic area",
+		options: [
+			{
+				value: true,
+				label: "On"
+			},
+			{
+				value: false,
+				label: "Off"
+			}
+		],
+		defaultValue: false
+	}
 
 	// ****************************************************************************************
 	// Property Panel Definition
@@ -85,7 +103,8 @@ define( [], function () {
 				items: {
 					chartInverted: chartInverted,
 					chartCurved: chartCurved,
-					chartBottomPinch: chartBottomPinch
+					chartBottomPinch: chartBottomPinch,
+					chartDynamicArea : chartDynamicArea
 				}
 			}
 		}

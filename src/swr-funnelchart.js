@@ -33,6 +33,7 @@ define( [
 				isInverted: layout.props.chartInverted,
 				isCurved: layout.props.chartCurved,
 				bottomPinch: layout.props.chartBottomPinch,
+				dynamicArea: layout.props.chartDynamicArea,
 				hoverEffects: true,
 				//bottomWidth: 1 / 2,
 				label: {
