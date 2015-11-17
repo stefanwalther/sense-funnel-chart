@@ -138,18 +138,7 @@
 		if (settings.height <= 0) {
 			settings.height = this.defaults.height;
 		}
-
-		// Initialize the colors for each block section
-		var colorScale = d3.scale.category10();
-		for (i = 0; i < this.data.length; i++) {
-			var hexExpression = /^#([0-9a-f]{3}|[0-9a-f]{6})$/i;
-
-			// If a color is not set for the record, add one
-			if (!("2" in this.data[i]) || !hexExpression.test(this.data[i][2])) {
-				this.data[i][2] = colorScale(i);
-			}
-		}
-
+		
 		// Initialize funnel chart settings
 		this.width = settings.width;
 		this.height = settings.height;

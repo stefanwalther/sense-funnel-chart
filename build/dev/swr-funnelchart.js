@@ -1,17 +1,17 @@
 define( [
 		'qlik',
 		'jquery',
+		'core.utils/theme',
 		'./properties',
 		'./initialproperties',
 		'./lib/js/extensionUtils',
 		'text!./lib/css/main.css',
-		'./lib/external/colorbrewer/colorbrewer',
 
 		// no return value
 		'./lib/external/d3/d3.min',
 		'./lib/external/d3-funnel/d3-funnel'
 	],
-	function ( qlik, $, props, initProps, extensionUtils, cssContent, colorbrewer ) {
+	function ( qlik, $, Theme, props, initProps, extensionUtils, cssContent ) {
 		'use strict';
 		extensionUtils.addStyleToHeader( cssContent );
 
@@ -73,6 +73,35 @@ define( [
 
 				var i = 0;
 				var l = layout.qHyperCube.qDataPages[0].qMatrix.length;
+				
+				///////////////// Colors /////////////////
+				
+				var maxDim = layout.qHyperCube.qDimensionInfo[0].qCardinal;
+				
+				// use the Qlik Sense Theme.colorSchemes
+				var colorScale;
+				switch(maxDim){
+					case 1: colorScale = Theme.colorSchemes.qualitativeScales[0].scale[0];
+					break;
+					case 2: colorScale = Theme.colorSchemes.qualitativeScales[0].scale[1];
+					break;
+					case 3: colorScale = Theme.colorSchemes.qualitativeScales[0].scale[2];
+					break;
+					case 4: colorScale = Theme.colorSchemes.qualitativeScales[0].scale[3];
+					break;
+					case 5: colorScale = Theme.colorSchemes.qualitativeScales[0].scale[4];
+					break;
+					case 6: colorScale = Theme.colorSchemes.qualitativeScales[0].scale[5];
+					break;
+					case 7: colorScale = Theme.colorSchemes.qualitativeScales[0].scale[6];
+					break;
+					case 8: colorScale = Theme.colorSchemes.qualitativeScales[0].scale[7];
+					break;
+					default : colorScale = Theme.colorSchemes.qualitativeScales[1].scale;
+				}
+				
+				///////////////// Colors /////////////////
+				
 				layout.qHyperCube.qDataPages[0].qMatrix.forEach( function ( row ) {
 
 					//console.log( 'data >>', row[1] );
@@ -82,9 +111,9 @@ define( [
 						row[1].qNum,
 						row[1].qText
 					] );
-					if ( l >= 3 ) { //colorbrewer doesn't have definition for 1 or 2 values, so let d3-funnel do the work
-						rowVals.push( colorbrewer.Paired[l][i] );
-					}
+					//TODO persistent color choice
+					rowVals.push( colorScale[row[0].qElemNumber] );
+					
 					data.push( rowVals );
 					i++;
 				} );
