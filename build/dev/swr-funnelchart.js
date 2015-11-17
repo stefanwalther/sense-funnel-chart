@@ -111,8 +111,13 @@ define( [
 						row[1].qNum,
 						row[1].qText
 					] );
-					//TODO persistent color choice
-					rowVals.push( colorScale[row[0].qElemNumber] );
+					
+					// persistent color
+					if(layout.props.chartPersistentColor)
+						rowVals.push( colorScale[row[0].qElemNumber] );
+					else{
+						rowVals.push( colorScale[i] );
+					}
 					
 					data.push( rowVals );
 					i++;
