@@ -1,11 +1,9 @@
 'use strict';
-var gulp = require('gulp');
-var senseGo = require('sense-go');
+var gulp = require( 'gulp' );
+var senseGo = require( 'sense-go' );
 
-var userConfig = {
-	"packageName": "sense-funnel-chart"
-};
+var userConfig = senseGo.loadYml( './sense-go.yml');
 
-senseGo.init( gulp, userConfig,  function (  ) {
+senseGo.init( gulp, userConfig, function () {
 
-});
+} );
