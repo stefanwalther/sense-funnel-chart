@@ -1,40 +1,39 @@
 v1.3.1:
-  date: 2015-08-11"
-  enhancements:
+  date: "2015-08-11"
+  changes:
     - Moved to sense-go
 v1.3.0:
   date: "2015-07-17"
-  enhancements:
+  changes:
     - Changed documentation system
     - Updated to newest version of d3-funnel
 v1.2.2:
   date: "2015-05-02"
-  enhancements:
+  changes:
     - Remove dependency on underscore
 
 v1.2.1:
   date: "2015-05-01"
-  enhancements:
+  changes:
     - Enable hover effect when hovering over an item.
     - Allow formatting of values (the formatted value of Qlik Sense will be displayed in the funnel)
     - Added preview image
 
 v1.1.1:
   date: "2015-04-07"
-  fixes:
+  changes:
     - Fixed an issue when working with Qlik Sense server
 
 v1.1.0:
   date: "2015-04-02"
-  enhancements:
+  changes:
     - Support selecting a dimension by clicking on the section in the funnel chart.
 
 v1.0.1:
   date: "2015-04-02"
-  fixes:
-    - Fixed an error when less than 3 dimensions are available
-  enhancements:
+  changes:
     - Update to the newest version of d3-funnel (v0.6.6)
+    - Fixed an error when less than 3 dimensions are available
 
 
 v1.0.0:
