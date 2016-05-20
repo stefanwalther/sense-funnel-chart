@@ -1,6 +1,7 @@
 define( [
 		'qlik',
 		'jquery',
+		'core.utils/theme',
 		'./properties',
 		'./initialproperties',
 		'./lib/js/extensionUtils',
@@ -11,7 +12,7 @@ define( [
 		'./lib/external/d3/d3.min',
 		'./lib/external/d3-funnel/d3-funnel'
 	],
-	function ( qlik, $, props, initProps, extensionUtils, cssContent, colorbrewer ) {
+	function ( qlik, $, Theme, props, initProps, extensionUtils, cssContent, colorbrewer ) {
 		'use strict';
 		extensionUtils.addStyleToHeader( cssContent );
 
@@ -33,10 +34,12 @@ define( [
 				isInverted: layout.props.chartInverted,
 				isCurved: layout.props.chartCurved,
 				bottomPinch: layout.props.chartBottomPinch,
+				dynamicArea: layout.props.chartDynamicArea,
 				hoverEffects: true,
 				//bottomWidth: 1 / 2,
 				label: {
-					fontsize: '10px'
+					fontsize: '10px',
+					fill: Theme.palette[layout.props.chartTextColor]
 				},
 				onItemClick: funnel_onItemClick
 			};
