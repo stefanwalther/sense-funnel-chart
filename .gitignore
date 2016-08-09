@@ -10,6 +10,7 @@ web.*.config
 /build/*_dev.zip
 /build/release/
 todos.md
+.sense-go.local.yml
 
 # =========================
 # Visual Studio
