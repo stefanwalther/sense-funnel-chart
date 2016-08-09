@@ -1,0 +1,8 @@
+packageName: sense-funnel-chart
+deployment:
+  toLocal:
+    enabled: false
+  toQrs:
+    enabled: false
+wbfolder:
+  enabled: false
