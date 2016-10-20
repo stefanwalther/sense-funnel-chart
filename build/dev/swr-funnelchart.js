@@ -1,5 +1,5 @@
 define( [
-		'qlik',
+		'js/qlik',
 		'jquery',
 		'./properties',
 		'./initialproperties',
@@ -64,7 +64,7 @@ define( [
 		 */
 		function transformData ( layout ) {
 
-			//console.log( 'hc', layout.qHyperCube );
+			// console.log( 'hc', layout.qHyperCube );
 
 			var data = null;
 			if ( layout.qHyperCube && layout.qHyperCube.qDataPages[0].qMatrix ) {
@@ -75,7 +75,7 @@ define( [
 				var l = layout.qHyperCube.qDataPages[0].qMatrix.length;
 				layout.qHyperCube.qDataPages[0].qMatrix.forEach( function ( row ) {
 
-					//console.log( 'data >>', row[1] );
+					// console.log( 'data >>', row[1] );
 					var rowVals = [];
 					rowVals.push( row[0].qText );
 					rowVals.push( [
