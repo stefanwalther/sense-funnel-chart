@@ -4,7 +4,9 @@
   "description": "Funnel Chart for Qlik Sense.",
   "main": "",
   "scripts": {
-    "test": ""
+    "test:setup-webdriver": "node_modules/.bin/webdriver-manager update --standalone false",
+    "test:aw-webserver": "aw-web-server -c ./test/aw-webserver-config.json",
+    "test:integration": "aw-webdriver-test-runner ./test/conf.dev.js --specs test/**/*.comp.spec.js --aw-artifacts-path ./test/integration/artifacts"
   },
   "repository": {
     "type": "git",
@@ -25,8 +27,12 @@
   },
   "homepage": "https://github.com/stefanwalther/sense-funnel-chart",
   "devDependencies": {
+    "@qlik/after-work": "^0.12.11",
+    "extend": "^3.0.0",
     "gulp": "git://github.com/gulpjs/gulp#4.0",
+    "playground-js-api": "git+ssh@github.com:Qlik-Branch/playground-js-api.git",
     "sense-go": "^0.5.1",
-    "verb": "git://github.com/verbose/verb"
+    "verb": "git://github.com/verbose/verb",
+    "webdriver-manager": "^10.2.4"
   }
 }
