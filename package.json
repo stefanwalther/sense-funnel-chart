@@ -1,32 +1,32 @@
 {
-  "name": "sense-funnel-chart",
-  "version": "1.3.13",
-  "description": "Funnel Chart for Qlik Sense.",
-  "main": "",
-  "scripts": {
-    "test": ""
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/stefanwalther/sense-funnel-chart.git"
-  },
-  "keywords": [
-    "qliksense-visualization-extension",
-    "chart",
-    "funnel-chart",
-    "qlik",
-    "qlik-sense",
-    "visualization"
-  ],
-  "author": "Stefan Walther",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/stefanwalther/sense-funnel-chart/issues"
-  },
-  "homepage": "https://github.com/stefanwalther/sense-funnel-chart",
-  "devDependencies": {
-    "gulp": "git://github.com/gulpjs/gulp#4.0",
-    "sense-go": "^0.5.1",
-    "verb": "git://github.com/verbose/verb"
-  }
+    "name": "sense-funnel-chart",
+    "version": "1.3.13",
+    "description": "Funnel Chart for Qlik Sense.",
+    "scripts": {
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/stefanwalther/sense-funnel-chart.git"
+    },
+    "keywords": [
+        "chart",
+        "funnel-chart",
+        "qlik",
+        "qlik-sense",
+        "qliksense-visualization-extension",
+        "visualization"
+    ],
+    "homepage": "https://github.com/stefanwalther/sense-funnel-chart",
+    "bugs": {
+        "url": "https://github.com/stefanwalther/sense-funnel-chart/issues"
+    },
+    "license": "MIT",
+    "author": "Stefan Walther",
+    "main": "",
+    "devDependencies": {
+        "extend": "^3.0.0",
+        "gulp": "git://github.com/gulpjs/gulp#4.0",
+        "sense-go": "^0.5.1",
+        "verb": "git://github.com/verbose/verb"
+    }
 }

@@ -1,14 +1,7 @@
-packageName: sense-funnel-chart
 deployment:
   toSsh:
-    enabled: true
+    enabled: false
     host: 192.168.56.11
     user: stefanwalther
     password: Test1234
     dest: "/cygdrive/c/Users/stefanwalther/Documents/Qlik/Sense/Extensions/sense-funnel-chart"
-  toLocal:
-    enabled: false
-  toQrs:
-    enabled: false
-wbfolder:
-  enabled: false
