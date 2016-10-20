@@ -5,8 +5,6 @@
         "baseDir": "./test/fixtures/",
         "routes": {
             "/src": "./build/dev"
-            //,
-            //"/main": "./test/fixtures/main.html"
         }
     }
 }

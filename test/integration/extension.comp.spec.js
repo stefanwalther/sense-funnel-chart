@@ -58,7 +58,7 @@ describe( "Extension rendering", function () {
 	it( "should render selections correctly", function() {
 		browser.executeScript("app.clearAll()");
 		graphItem.click();
-		browser.sleep(sleep);
+		browser.sleep(sleep*2);
 		return expect( browser.takeImageOf( {selector: ".rendered"} ) ).to.eventually.matchImageOf( "selected" );
 	} );
 
