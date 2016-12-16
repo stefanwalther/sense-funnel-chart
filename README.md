@@ -1,5 +1,8 @@
 # Funnel Chart for Qlik Sense
 
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9b14e3b1265d46ee91168a5630c35745)](https://www.codacy.com/app/stefan-walther/sense-funnel-chart?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=stefanwalther/sense-funnel-chart&amp;utm_campaign=badger)
+
 > Funnel Chart for Qlik Sense.
 
 ***
