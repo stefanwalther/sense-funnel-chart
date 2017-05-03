@@ -1,5 +1,7 @@
 # Funnel Chart for Qlik Sense
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/stefanwalther/sense-funnel-chart.svg)](https://greenkeeper.io/)
+
 > Funnel Chart for Qlik Sense.
 
 ***
