@@ -1,0 +1,158 @@
+{
+	"tests": [
+		{
+			"title": "should render default settings correctly",
+			"fullTitle": "Extension rendering should render default settings correctly",
+			"state": "failed",
+			"passed": false,
+			"failed": true,
+			"pending": false,
+			"code": "browser.sleep(sleep);<br><span class=\"hljs-keyword\">return</span> expect(browser.takeImageOf({ selector: <span class=\"hljs-string\">\".rendered\"</span> })).to.eventually.matchImageOf(<span class=\"hljs-string\">\"default\"</span>);",
+			"timedOut": false,
+			"duration": 1425,
+			"file": "/Users/swr/git/qs-extensions/sense-funnel-chart/test/integration/extension.comp.spec.js",
+			"screenshot": "screenshots/extension_rendering_should_render_default_settings_correctly-chrome-2016-11-09_18-12-50.png",
+			"err": {
+				"message": "No baseline found! New baseline generated at ./test/integration/artifacts/baseline/default-mac-os-x-chrome.png",
+				"showDiff": false,
+				"actual": {},
+				"expected": {
+					"baseline": "baseline/default-mac-os-x-chrome.png",
+					"diff": "diff/default-mac-os-x-chrome.png",
+					"regression": "regression/default-mac-os-x-chrome.png"
+				},
+				"stack": "AssertionError: No baseline found! New baseline generated at ./test/integration/artifacts/baseline/<span class=\"hljs-keyword\">default</span>-mac-os-x-chrome.png<br>From: Task: Extension rendering should render <span class=\"hljs-keyword\">default</span> settings correctly<br>    at Context.ret (node_modules/selenium-webdriver/testing/index.js:<span class=\"hljs-number\">128</span>:<span class=\"hljs-number\">10</span>)<br>    at node_modules/selenium-webdriver/testing/index.js:<span class=\"hljs-number\">80</span>:<span class=\"hljs-number\">5</span><br>    at <span class=\"hljs-built_in\">Promise</span>.invokeCallback_ (node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">1329</span>:<span class=\"hljs-number\">14</span>)<br>    at TaskQueue.execute_ (node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">2790</span>:<span class=\"hljs-number\">14</span>)<br>    at TaskQueue.executeNext_ (node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">2773</span>:<span class=\"hljs-number\">21</span>)<br>    at node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">2652</span>:<span class=\"hljs-number\">27</span><br>    at node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">639</span>:<span class=\"hljs-number\">7</span>"
+			}
+		},
+		{
+			"title": "should render changed chartCurved layout correctly",
+			"fullTitle": "Extension rendering should render changed chartCurved layout correctly",
+			"state": "failed",
+			"passed": false,
+			"failed": true,
+			"pending": false,
+			"code": "browser.executeScript(<span class=\"hljs-string\">\"$('#extension').scope().model.layout.props.chartCurved=true; window.dispatchEvent(new Event('resize'));\"</span>);<br>browser.sleep(sleep);<br><span class=\"hljs-keyword\">return</span> expect(browser.takeImageOf({ selector: <span class=\"hljs-string\">\".rendered\"</span> })).to.eventually.matchImageOf(<span class=\"hljs-string\">\"chartCurved\"</span>);",
+			"timedOut": false,
+			"duration": 1316,
+			"file": "/Users/swr/git/qs-extensions/sense-funnel-chart/test/integration/extension.comp.spec.js",
+			"screenshot": "screenshots/extension_rendering_should_render_changed_chartcurved_layout_correctly-chrome-2016-11-09_18-12-50.png",
+			"err": {
+				"message": "No baseline found! New baseline generated at ./test/integration/artifacts/baseline/chartCurved-mac-os-x-chrome.png",
+				"showDiff": false,
+				"actual": {},
+				"expected": {
+					"baseline": "baseline/chartCurved-mac-os-x-chrome.png",
+					"diff": "diff/chartCurved-mac-os-x-chrome.png",
+					"regression": "regression/chartCurved-mac-os-x-chrome.png"
+				},
+				"stack": "AssertionError: No baseline found! New baseline generated at ./test/integration/artifacts/baseline/chartCurved-mac-os-x-chrome.png<br>From: Task: Extension rendering should render changed chartCurved layout correctly<br>    at Context.ret (node_modules/selenium-webdriver/testing/index.js:<span class=\"hljs-number\">128</span>:<span class=\"hljs-number\">10</span>)<br>    at node_modules/selenium-webdriver/testing/index.js:<span class=\"hljs-number\">80</span>:<span class=\"hljs-number\">5</span><br>    at <span class=\"hljs-built_in\">Promise</span>.invokeCallback_ (node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">1329</span>:<span class=\"hljs-number\">14</span>)<br>    at TaskQueue.execute_ (node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">2790</span>:<span class=\"hljs-number\">14</span>)<br>    at TaskQueue.executeNext_ (node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">2773</span>:<span class=\"hljs-number\">21</span>)<br>    at node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">2652</span>:<span class=\"hljs-number\">27</span><br>    at node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">639</span>:<span class=\"hljs-number\">7</span>"
+			}
+		},
+		{
+			"title": "should render changed chartBottomPinch layout correctly (1)",
+			"fullTitle": "Extension rendering should render changed chartBottomPinch layout correctly (1)",
+			"state": "failed",
+			"passed": false,
+			"failed": true,
+			"pending": false,
+			"code": "browser.executeScript(<span class=\"hljs-string\">\"$('#extension').scope().model.layout.props.chartBottomPinch=1; window.dispatchEvent(new Event('resize'));\"</span>);<br>browser.sleep(sleep);<br><span class=\"hljs-keyword\">return</span> expect(browser.takeImageOf({ selector: <span class=\"hljs-string\">\".rendered\"</span> })).to.eventually.matchImageOf(<span class=\"hljs-string\">\"chartBottomPinch-1\"</span>);",
+			"timedOut": false,
+			"duration": 1276,
+			"file": "/Users/swr/git/qs-extensions/sense-funnel-chart/test/integration/extension.comp.spec.js",
+			"screenshot": "screenshots/extension_rendering_should_render_changed_chartbottompinch_layout_correctly_(1)-chrome-2016-11-09_18-12-50.png",
+			"err": {
+				"message": "No baseline found! New baseline generated at ./test/integration/artifacts/baseline/chartBottomPinch-1-mac-os-x-chrome.png",
+				"showDiff": false,
+				"actual": {},
+				"expected": {
+					"baseline": "baseline/chartBottomPinch-1-mac-os-x-chrome.png",
+					"diff": "diff/chartBottomPinch-1-mac-os-x-chrome.png",
+					"regression": "regression/chartBottomPinch-1-mac-os-x-chrome.png"
+				},
+				"stack": "AssertionError: No baseline found! New baseline generated at ./test/integration/artifacts/baseline/chartBottomPinch-<span class=\"hljs-number\">1</span>-mac-os-x-chrome.png<br>From: Task: Extension rendering should render changed chartBottomPinch layout correctly (<span class=\"hljs-number\">1</span>)<br>    at Context.ret (node_modules/selenium-webdriver/testing/index.js:<span class=\"hljs-number\">128</span>:<span class=\"hljs-number\">10</span>)<br>    at node_modules/selenium-webdriver/testing/index.js:<span class=\"hljs-number\">80</span>:<span class=\"hljs-number\">5</span><br>    at <span class=\"hljs-built_in\">Promise</span>.invokeCallback_ (node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">1329</span>:<span class=\"hljs-number\">14</span>)<br>    at TaskQueue.execute_ (node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">2790</span>:<span class=\"hljs-number\">14</span>)<br>    at TaskQueue.executeNext_ (node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">2773</span>:<span class=\"hljs-number\">21</span>)<br>    at node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">2652</span>:<span class=\"hljs-number\">27</span><br>    at node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">639</span>:<span class=\"hljs-number\">7</span>"
+			}
+		},
+		{
+			"title": "should render changed chartBottomPinch layout correctly (3)",
+			"fullTitle": "Extension rendering should render changed chartBottomPinch layout correctly (3)",
+			"state": "failed",
+			"passed": false,
+			"failed": true,
+			"pending": false,
+			"code": "browser.executeScript(<span class=\"hljs-string\">\"$('#extension').scope().model.layout.props.chartBottomPinch=3; window.dispatchEvent(new Event('resize'));\"</span>);<br>browser.sleep(sleep);<br><span class=\"hljs-keyword\">return</span> expect(browser.takeImageOf({ selector: <span class=\"hljs-string\">\".rendered\"</span> })).to.eventually.matchImageOf(<span class=\"hljs-string\">\"chartBottomPinch-3\"</span>);",
+			"timedOut": false,
+			"duration": 1258,
+			"file": "/Users/swr/git/qs-extensions/sense-funnel-chart/test/integration/extension.comp.spec.js",
+			"screenshot": "screenshots/extension_rendering_should_render_changed_chartbottompinch_layout_correctly_(3)-chrome-2016-11-09_18-12-50.png",
+			"err": {
+				"message": "No baseline found! New baseline generated at ./test/integration/artifacts/baseline/chartBottomPinch-3-mac-os-x-chrome.png",
+				"showDiff": false,
+				"actual": {},
+				"expected": {
+					"baseline": "baseline/chartBottomPinch-3-mac-os-x-chrome.png",
+					"diff": "diff/chartBottomPinch-3-mac-os-x-chrome.png",
+					"regression": "regression/chartBottomPinch-3-mac-os-x-chrome.png"
+				},
+				"stack": "AssertionError: No baseline found! New baseline generated at ./test/integration/artifacts/baseline/chartBottomPinch-<span class=\"hljs-number\">3</span>-mac-os-x-chrome.png<br>From: Task: Extension rendering should render changed chartBottomPinch layout correctly (<span class=\"hljs-number\">3</span>)<br>    at Context.ret (node_modules/selenium-webdriver/testing/index.js:<span class=\"hljs-number\">128</span>:<span class=\"hljs-number\">10</span>)<br>    at node_modules/selenium-webdriver/testing/index.js:<span class=\"hljs-number\">80</span>:<span class=\"hljs-number\">5</span><br>    at <span class=\"hljs-built_in\">Promise</span>.invokeCallback_ (node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">1329</span>:<span class=\"hljs-number\">14</span>)<br>    at TaskQueue.execute_ (node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">2790</span>:<span class=\"hljs-number\">14</span>)<br>    at TaskQueue.executeNext_ (node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">2773</span>:<span class=\"hljs-number\">21</span>)<br>    at node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">2652</span>:<span class=\"hljs-number\">27</span><br>    at node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">639</span>:<span class=\"hljs-number\">7</span>"
+			}
+		},
+		{
+			"title": "should render changed chartInverted layout correctly",
+			"fullTitle": "Extension rendering should render changed chartInverted layout correctly",
+			"state": "failed",
+			"passed": false,
+			"failed": true,
+			"pending": false,
+			"code": "browser.executeScript(<span class=\"hljs-string\">\"$('#extension').scope().model.layout.props.chartInverted=true; window.dispatchEvent(new Event('resize'));\"</span>);<br>browser.sleep(sleep);<br><span class=\"hljs-keyword\">return</span> expect(browser.takeImageOf({ selector: <span class=\"hljs-string\">\".rendered\"</span> })).to.eventually.matchImageOf(<span class=\"hljs-string\">\"chartInverted\"</span>);",
+			"timedOut": false,
+			"duration": 1249,
+			"file": "/Users/swr/git/qs-extensions/sense-funnel-chart/test/integration/extension.comp.spec.js",
+			"screenshot": "screenshots/extension_rendering_should_render_changed_chartinverted_layout_correctly-chrome-2016-11-09_18-12-50.png",
+			"err": {
+				"message": "No baseline found! New baseline generated at ./test/integration/artifacts/baseline/chartInverted-mac-os-x-chrome.png",
+				"showDiff": false,
+				"actual": {},
+				"expected": {
+					"baseline": "baseline/chartInverted-mac-os-x-chrome.png",
+					"diff": "diff/chartInverted-mac-os-x-chrome.png",
+					"regression": "regression/chartInverted-mac-os-x-chrome.png"
+				},
+				"stack": "AssertionError: No baseline found! New baseline generated at ./test/integration/artifacts/baseline/chartInverted-mac-os-x-chrome.png<br>From: Task: Extension rendering should render changed chartInverted layout correctly<br>    at Context.ret (node_modules/selenium-webdriver/testing/index.js:<span class=\"hljs-number\">128</span>:<span class=\"hljs-number\">10</span>)<br>    at node_modules/selenium-webdriver/testing/index.js:<span class=\"hljs-number\">80</span>:<span class=\"hljs-number\">5</span><br>    at <span class=\"hljs-built_in\">Promise</span>.invokeCallback_ (node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">1329</span>:<span class=\"hljs-number\">14</span>)<br>    at TaskQueue.execute_ (node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">2790</span>:<span class=\"hljs-number\">14</span>)<br>    at TaskQueue.executeNext_ (node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">2773</span>:<span class=\"hljs-number\">21</span>)<br>    at node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">2652</span>:<span class=\"hljs-number\">27</span><br>    at node_modules/selenium-webdriver/lib/promise.js:<span class=\"hljs-number\">639</span>:<span class=\"hljs-number\">7</span>"
+			}
+		},
+		{
+			"title": "should render selections correctly",
+			"fullTitle": "Extension rendering should render selections correctly",
+			"state": "failed",
+			"passed": false,
+			"failed": true,
+			"pending": false,
+			"code": "browser.executeScript(<span class=\"hljs-string\">\"app.clearAll()\"</span>);<br>graphItem.click();<br>browser.sleep(sleep * <span class=\"hljs-number\">2</span>);<br><span class=\"hljs-keyword\">return</span> expect(browser.takeImageOf({ selector: <span class=\"hljs-string\">\".rendered\"</span> })).to.eventually.matchImageOf(<span class=\"hljs-string\">\"selected\"</span>);",
+			"timedOut": false,
+			"duration": 18,
+			"file": "/Users/swr/git/qs-extensions/sense-funnel-chart/test/integration/extension.comp.spec.js",
+			"screenshot": "screenshots/extension_rendering_should_render_selections_correctly-chrome-2016-11-09_18-12-50.png",
+			"err": {
+				"stack": "NoSuchElementError: No element found using locator: by.cssContainingText(\"svg g\", \"Womens wear: 94\")<br>    at WebDriverError (node_modules/selenium-webdriver/error.js:26:26)<br>    at NoSuchElementError (node_modules/selenium-webdriver/error.js:229:26)<br>    at node_modules/@qlik/after-work/node_modules/protractor/built/element.js:662:27<br>    at Promise.invokeCallback_ (node_modules/selenium-webdriver/lib/promise.js:1329:14)<br>    at TaskQueue.execute_ (node_modules/selenium-webdriver/lib/promise.js:2790:14)<br>    at TaskQueue.executeNext_ (node_modules/selenium-webdriver/lib/promise.js:2773:21)<br>    at node_modules/selenium-webdriver/lib/promise.js:2652:27<br>    at node_modules/selenium-webdriver/lib/promise.js:639:7<br>Error<br>    at ElementArrayFinder.applyAction_ (node_modules/@qlik/after-work/node_modules/protractor/built/element.js:371:27)<br>    at ElementArrayFinder._this.(anonymous function) [as click] (node_modules/@qlik/after-work/node_modules/protractor/built/element.js:83:30)<br>    at ElementFinder._this.(anonymous function) [as click] (node_modules/@qlik/after-work/node_modules/protractor/built/element.js:685:22)<br>    at Context.&lt;anonymous&gt; (test/integration/extension.comp.spec.js:62:13)<br>    at node_modules/selenium-webdriver/testing/index.js:144:19<br>    at new Promise (node_modules/selenium-webdriver/lib/promise.js:1043:7)<br>    at controlFlowExecute (node_modules/selenium-webdriver/testing/index.js:129:14)<br>    at TaskQueue.execute_ (node_modules/selenium-webdriver/lib/promise.js:2790:14)<br>    at TaskQueue.executeNext_ (node_modules/selenium-webdriver/lib/promise.js:2773:21)<br>    at node_modules/selenium-webdriver/lib/promise.js:2697:25<br>    at node_modules/selenium-webdriver/lib/promise.js:639:7<br>From: Task: Extension rendering should render selections correctly<br>    at Context.ret (node_modules/selenium-webdriver/testing/index.js:128:10)<br>    at node_modules/selenium-webdriver/testing/index.js:80:5<br>    at Promise.invokeCallback_ (node_modules/selenium-webdriver/lib/promise.js:1329:14)<br>    at TaskQueue.execute_ (node_modules/selenium-webdriver/lib/promise.js:2790:14)<br>    at TaskQueue.executeNext_ (node_modules/selenium-webdriver/lib/promise.js:2773:21)<br>    at node_modules/selenium-webdriver/lib/promise.js:2652:27<br>    at node_modules/selenium-webdriver/lib/promise.js:639:7",
+				"message": "No element found using locator: by.cssContainingText(\"svg g\", \"Womens wear: 94\")",
+				"name": "NoSuchElementError"
+			}
+		}
+	],
+	"stats": {
+		"suites": 1,
+		"tests": 6,
+		"passes": 0,
+		"pending": 0,
+		"failures": 6,
+		"start": "2016-11-09T18:12:50.964Z",
+		"end": "2016-11-09T18:13:11.385Z",
+		"duration": 20421,
+		"browserName": "chrome",
+		"browserVersion": "54.0.2840.71",
+		"platform": "mac-os-x",
+		"name": "sense-funnel-chart",
+		"description": "Funnel Chart for Qlik Sense.",
+		"version": "1.3.13"
+	}
+}

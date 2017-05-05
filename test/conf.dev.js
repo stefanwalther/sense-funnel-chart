@@ -1,5 +1,5 @@
-const baseConfig = require( "@qlik/after-work/dist/config/conf.js" ).config;
-var httpServer = require( "@qlik/after-work/dist/utils" ).httpServer;
+const baseConfig = require( "after-work.js/dist/config/conf.js" ).config;
+const httpServer = require( "after-work.js/dist/utils" ).httpServer;
 const extend = require( "extend" );
 
 delete baseConfig.multiCapabilities;
@@ -24,7 +24,7 @@ const config = extend( true, baseConfig, {
 					}
 				}
 		} );
-	},
+	}
 } );
 
 module.exports = {

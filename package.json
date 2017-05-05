@@ -1,40 +1,41 @@
 {
-    "name": "sense-funnel-chart",
-    "version": "1.3.13",
-    "description": "Funnel Chart for Qlik Sense.",
-    "scripts": {
-        "test:create-container": "ext-test --name 'sense-funnel-chart' --app 'sense-funnel-chart.qvf' --port 5000 --clientMount /Users/swr/git/rnd/qap-linux-showcase/admin-interface/qs-client/3.0-alpha --documentMount /Users/swr/git/qs-extensions/sense-funnel-chart/test/integration/artifacts/app --extensionsMount /Users/swr/git/qs-extensions/sense-funnel-chart/build/dev",
-        "test:setup-webdriver": "node_modules/.bin/webdriver-manager update --standalone false",
-        "test:aw-webserver": "aw-web-server -c ./test/aw-webserver-config.json",
-        "test:aw-webserver-container": "npm run test:create-container",
-        "test:integration": "aw-webdriver-test-runner ./test/conf.dev.js --specs test/**/*.comp.spec.js --aw-artifacts-path ./test/integration/artifacts"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/stefanwalther/sense-funnel-chart.git"
-    },
-    "keywords": [
-        "chart",
-        "funnel-chart",
-        "qlik",
-        "qlik-sense",
-        "qliksense-visualization-extension",
-        "visualization"
-    ],
-    "homepage": "https://github.com/stefanwalther/sense-funnel-chart",
-    "bugs": {
-        "url": "https://github.com/stefanwalther/sense-funnel-chart/issues"
-    },
-    "license": "MIT",
-    "author": "Stefan Walther",
-    "main": "",
-    "devDependencies": {
-        "@qlik/after-work": "^0.12.11",
-        "extend": "^3.0.0",
-        "gulp": "git://github.com/gulpjs/gulp#4.0",
-        "playground-js-api": "git+ssh@github.com:Qlik-Branch/playground-js-api.git",
-        "sense-go": "^0.5.1",
-        "verb": "git://github.com/verbose/verb",
-        "webdriver-manager": "^10.2.4"
-    }
+  "name": "sense-funnel-chart",
+  "version": "1.3.13",
+  "description": "Funnel Chart for Qlik Sense.",
+  "scripts": {
+    "test:create-container": "ext-test --name 'sense-funnel-chart' --app 'sense-funnel-chart.qvf' --port 5000 --clientMount /Users/swr/git/rnd/qap-linux-showcase/admin-interface/qs-client/3.0-alpha --documentMount /Users/swr/git/qs-extensions/sense-funnel-chart/test/integration/artifacts/app --extensionsMount /Users/swr/git/qs-extensions/sense-funnel-chart/build/dev",
+    "test:setup-webdriver": "node_modules/after-work.js/node_modules/.bin/webdriver-manager update --standalone false",
+    "test:aw-webserver": "aw-web-server -c ./test/aw-webserver-config.json",
+    "test:aw-webserver-container": "npm run test:create-container",
+    "test:integration": "aw-webdriver-test-runner ./test/conf.dev.js --specs test/**/*.comp.spec.js --aw-artifacts-path ./test/integration/artifacts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stefanwalther/sense-funnel-chart.git"
+  },
+  "keywords": [
+    "chart",
+    "funnel-chart",
+    "qlik",
+    "qlik-sense",
+    "qliksense-visualization-extension",
+    "visualization"
+  ],
+  "homepage": "https://github.com/stefanwalther/sense-funnel-chart",
+  "bugs": {
+    "url": "https://github.com/stefanwalther/sense-funnel-chart/issues"
+  },
+  "license": "MIT",
+  "author": "Stefan Walther",
+  "main": "",
+  "devDependencies": {
+    "after-work.js": "^2.0.0",
+    "extend": "^3.0.0",
+    "gulp": "git://github.com/gulpjs/gulp#4.0",
+    "playground-js-api": "git+ssh@github.com:Qlik-Branch/playground-js-api.git",
+    "protractor": "^5.1.1",
+    "sense-go": "^0.12.3",
+    "verb": "git://github.com/verbose/verb",
+    "webdriver-manager": "^12.0.5"
+  }
 }
